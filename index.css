@@ -1,0 +1,233 @@
+/** {
+    box-sizing: border-box;
+    border: solid greenyellow 1px; 
+
+}
+*/
+:root{
+    --color_primario: #ABA361;
+    --color-primario-dark: #732C2C;
+    --color-secundario: #BAD9B5;
+    --color-secundario-dark: #420C14;
+    --color-fondo: #EFF7CF;
+    --color-fondo-dark: black;
+    --color-fondo-secundario: grey;
+}
+
+body {background-color: #732C2C;
+    
+
+}
+
+/*UNIDAD DE MEDIDA COMO % DEL MÁXIMO DEL DISPOSITIVO ==== vmax*/
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 230px;
+    margin-bottom: 5vh ;
+}
+/*
+html {
+    background-color: var(--color-fondo);
+}*/
+
+/*#fijo{
+    position: fixed;
+    width: 100%;
+    padding: 25px;
+}
+*/
+/*#tope {
+    background-color: var(--color_primario);
+    position: absolute;
+    display:block
+
+
+/*OJO!! Preferible usar clases y no id!! reemplazar!!*/
+
+header{
+    background-color: #ABA361;
+}
+
+header img {
+    width: 10vw;
+    min-width: 100px;
+    background-color: #ABA361;
+   
+}
+
+
+
+#barra_nav {
+    background-color: var(--color-primario-dark);
+    color: var(--color-fondo);
+    font-size: medium;
+    font-style: italic;  
+    letter-spacing: 0,2rem;
+    text-shadow:#420C14 2px 2px 5px;
+}
+
+#barra_nav a {
+    
+    text-decoration: none;
+    color:#BAD9B5;
+    padding: 1px 15px;
+    }
+
+#barra_nav i {
+    
+        color:white;
+        
+        
+        }
+
+h1{
+    color: var(--color-fondo);
+    text-shadow: 2px 3px 6px var(--color-secundario);
+    
+}
+
+h2{
+    max-height: 4vh;
+}
+
+h3{
+    font-size: large;
+}
+
+section p, ul {
+    color: red;
+    font-size: 85%;
+}
+
+#foto_pers {
+    text-shadow: 2px 3px 6px var(--color-primario-dark)
+}
+
+#lateral_izq, #lateral_der, #header {
+    background-color: var(--color-secundario);
+    
+    
+}
+
+
+.cuerpo {
+    background-color:var(--color-fondo);
+    padding: 0px 15px;
+        
+}
+
+#pie {
+    background-color: var(--color-secundario);
+    font-size: small;
+}
+
+.to-top {
+    background: white;
+    position: fixed;
+    bottom: 0px;
+    right:20px;
+    width:30px;
+    height:30px;
+    border-radius: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:15px;
+    color:#1f1f1f;
+    text-decoration: none;
+    opacity:0;
+    pointer-events: none;
+    transition: all .4s;
+  }
+  
+  .to-top.active {
+    bottom: 45px;
+    pointer-events: auto;
+    opacity:1;
+  }
+
+/*dentro de css puedo importar otro css con @import"/...xxx".css*/
+
+/* FLEXBOX
+
+Display: flex
+
+flex-direction - reverse
+flex-wrap - reverse
+flex-flow combina las dos cosas: elección col/row y direceccion
+
+Justify-content--> flex start=izq / flex end=der / space around / space between
+También Align-items / strecht=ocupa todo
+
+a los div les puedo dar order: 1, 2, etc dentro del flex-container
+
+*/
+/*
+.encabezado {
+    float: left;
+    width: 100%;
+    height: 20%;
+}
+
+.menu_izq {
+    float: left;
+    width: 15%;
+    background-color: rgb(62, 250, 77);
+    height: 70%;
+}
+
+.cuerpo {
+    float: left;
+    width: 85%;
+    background-color: chocolate;
+    height: 70%;
+}
+
+.pie {
+    float: left;
+    width: 100%;
+    background-color: cadetblue;
+}
+/*
+ID se selecciona con #
+
+CLASS se selecciona con .
+se recomiendan los 2 antes que entrar por elementos
+
+
+h1, h4 {
+    background-color: chartreuse;
+    text-align: center;
+}
+
+ 
+nav {
+    background-color: blueviolet;
+}
+
+.center {
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5%;
+  }
+
+
+#parr {
+    font-family: 'Asap', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Rowdies', cursive;
+}
+
+html {
+    font-family: 'Asap', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Rowdies', cursive;
+  }
+*/  
