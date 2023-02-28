@@ -1,6 +1,7 @@
 
 
-//API RANDOM USER // fue de lo primero que hice al iniciar el proyecto y no copié los links de donde obtuve info para hacerlo :(
+//API RANDOM USER // 
+//fue de lo primero que hice al iniciar el proyecto y no copié los links de donde obtuve info para hacerlo.
 
 fetch('https://randomuser.me/api/?results=1')
     .then(res => res.json())
@@ -14,8 +15,7 @@ fetch('https://randomuser.me/api/?results=1')
         let fechaNac = new Date(data.results[0].dob.date)
 
        //FORMATO DE FECHAS (https://www.youtube.com/watch?v=eOlDANgRaf8)
-       //.toLocaleDateString('en-us', {year:"numeric", day:"numeric", month:"numeric"}) DESCARTAR, LO HABÍA USADO ANTES!!
-
+       
             let anioNac = (fechaNac.getFullYear());
             let mesNac = ('0' + (parseInt(fechaNac.getMonth())+1)).slice(-2);
             let diaNac = ('0' + parseInt(fechaNac.getDate())).slice(-2);
@@ -82,28 +82,12 @@ window.addEventListener("scroll", () => {
 })
 
 
-
-// COLAPSAR NAVBAR LUEGO DEL CLIK (https://stackoverflow.com/questions/69881583/bootstrap-5-1-3-navbar-not-collapse-after-click)
-
-/*
-  jQuery(document).ready(function($) {
-      $('.navbar-nav li a').on("click", function() {
-          console.log("menu clicked");
-          $('button.navbar-toggler').click();
-      })
-  })
-*/
-
 // CALCULAR ALTO DEL HEADER PARA APLICAR SCROLL PADDING (https://www.youtube.com/watch?v=iGUSTyG-CYw)
-//(le agregué el retardo porque si no me lo calculaba antes de cargar los datos, probé con EventListener DOMContentLoaded
-//pero no me funcionó. Seguro hay una forma más adecuada de resolverlo pero se me acerca el tiempo de entrega del proyecto
-//y si bien no es lo óptimo así al menos funciona)
-
 
 function calcularScrollPadding () {
     let altoHeader = document.getElementById("header")
     .offsetHeight;
-    console.log(altoHeader);
+    //console.log(altoHeader);
 
     document.documentElement.style.setProperty(
         "--scroll-padding",
@@ -112,71 +96,16 @@ function calcularScrollPadding () {
 
 setTimeout(calcularScrollPadding, 1500);
 
-/*document.getElementById("header").addEventListener("resize", (event) => {
+/* (le agregué el retardo porque si no me lo calculaba antes de cargar los datos. Probé con EventListener DOMContentLoaded
+   pero no me funcionó. Seguro hay una forma más adecuada de resolverlo pero se me acerca el tiempo de entrega del proyecto
+   y si bien no es lo óptimo así al menos funciona)*/
+
+/*
+document.getElementById("header").addEventListener("resize", (event) => {
     calcularScrollPadding ()
     });
 */ 
-// Esto lo descarto por el momento porque sería ideal si el menú se cerrará al hacer click. Intenté solucionarlo mediante
-// Boostrap agregando class="collapse navbar-collapse" id="my-navbar-collapse" toggle="collapse" data-target=".navbar-collapse"
-// pero así se cerraba el menú pero dejaban de funcionar los links. No me dio el tiempo para seguir indagando.    
 
-
-
-/*document.documentElement.style.setProperty(
-  "--scroll-padding",
-  altoHeader + 10 + "px");
-});
-/* function obtenerDatos() {
-    fetch('https://randomuser.me/api/?results=1')
-    .then(res => res.json())
-    .then(data => RandomUser.renderUserData(data))
-    .catch(error => alert(error));
-    }
-
-renderUserData(data){
-    console.log(data);
-}
-        
-        
-        
-        
-        
-        
-        
-
-        console.log(data); 
-
-        let author = data.results;
-        // console.log(author);
-
-        //Get Data Value
-        let output = "<h2><center>Get User Data</center></h2>";
-
-        //Get Data Loop Through
-        author.forEach(function (lists) {
-            output += `
-            <div class="container">
-                <div class="card mt-4 bg-light">
-                    <ul class="list-group">
-                        <li class="list-group-item"><h2>Name: ${lists.name.first}</h2></li>
-                        <li class="list-group-item"><img src="${lists.picture.large}"></li>
-                        <li class="list-group-item">Phone Number: ${lists.cell}</li>
-                        <li class="list-group-item">DOB: ${lists.dob.date}</li>
-                        <li class="list-group-item">Age: ${lists.dob.age}</li>
-                        <li class="list-group-item">Email ID: ${lists.email}</li>
-                        <li class="list-group-item">Gender: ${lists.gender}</li>
-                        <li class="list-group-item">City: ${lists.location.city}</li>
-                        <li class="list-group-item">Country: ${lists.location.country}</li>
-                        <li class="list-group-item">PostCode: ${lists.location.postcode}</li>
-                    </ul>
-                </div>
-            </div> `;
-        });
-
-        //Show On Our Screen All Data
-        document.getElementById('desde_api').innerHTML = output;
-
-    });
-};
-
-*/
+/* Esto lo descarto por el momento porque sería ideal si el menú se cerrará al hacer click. Intenté solucionarlo mediante
+   Boostrap agregando class="collapse navbar-collapse" id="my-navbar-collapse" toggle="collapse" data-target=".navbar-collapse"
+   y así se cerraba el menú pero dejaban de funcionar los links. No me dio el tiempo para seguir indagando.*/    

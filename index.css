@@ -3,7 +3,7 @@ body {
     --color-fondo-A: #f1f7ed;
     --color-fondo-B: #6d9d98;
     --color-fondo-C: #02c39a;
-    --color-texto-A: #243E36;
+    --color-texto-A: #13211d;
     --color-texto-B: #F0F3BD;
     --color-texto-C: #05668d;
     --color-acento: black;
@@ -14,9 +14,9 @@ body.oscuro {
     --color-fondo-A: #243E36;
     --color-fondo-B: #ad8e16;
     --color-fondo-C: #11536d;
+    --color-texto-A: #f1f7ed;
     --color-texto-B: #e0eec6;
     --color-texto-C: #F0F3BD;
-    --color-texto-A: #f1f7ed;
     --color-acento: white;
     
 }
@@ -28,7 +28,13 @@ body.oscuro {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--scroll-padding, 250px);
-    margin-bottom: 5.5vh ;   
+    margin-bottom: 5.5vh ;
+    margin-left: 0px;
+    margin-right: 0px;   
+}
+
+.row {
+    margin: 0; /*tuve que agregar esto porque si no quedaba el cuerpo con más margen que el header*/
 }
 
 header {
@@ -36,9 +42,10 @@ header {
 }
 
 header img {
-    width: 10vw;
+    width: 7vw;
     min-width: 100px;
     box-shadow: 4px 4px 10px;
+    margin: 3px;
     }
 
 nav {
@@ -65,13 +72,14 @@ h1 {
     color: var(--color-texto-B);
     text-shadow: 2px 2px 5px var(--color-acento);
     letter-spacing: 2px;
+    margin: 3px;
     
 }
 
 h2 {
-    max-height: 4vh;
     color: var(--color-texto-B);
     font-style: italic;
+    margin: 5px;
 }
 
 h3 {
