@@ -92,11 +92,11 @@ section p, ul {
     font-weight: lighter;
 }
 
-#lateral_izq {
+.lateral_izq {
     background-image: linear-gradient(to right, var(--color-fondo-C), 60%, var(--color-fondo-A));
 } 
 
-#lateral_der {
+.lateral_der {
     background-image: linear-gradient(to right, var(--color-fondo-A), 60%, var(--color-fondo-C));
 }
 
@@ -105,18 +105,18 @@ section p, ul {
     padding: 0px 0px; 
 }
 
-#cuerpo_centro {
+.cuerpo_centro {
     box-shadow: inset 0 0 1.5px;
 }
 
-#pie {
+.pie {
     background-color: var(--color-fondo-B);
     color: var(--color-texto-B);
     font-size: small;
     box-shadow: 0px -3px 15px black;
 }
 
-#pie a {
+.pie a {
     color: var(--color-texto-B);
     font-size: small;
     
