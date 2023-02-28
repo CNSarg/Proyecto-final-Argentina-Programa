@@ -1,0 +1,36 @@
+body {
+    background-image: linear-gradient(
+        to left,rgba(149, 255, 172, 0.934), rgba(255, 255, 99, 0.62))
+    }
+    
+    html {
+        font-style: italic; color: chocolate;
+        font-family:Verdana, Geneva, Tahoma, sans-serif; 
+        
+    }
+
+    div {
+        display:flex;
+        justify-content:grid;
+        align-items: center;
+    }
+    
+    #logo_central {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%)
+    }
+    
+    button {
+        border: 6px; border-color: rgb(236, 189, 19); border-style: solid; border-radius: 6%;
+        background-color: chocolate;
+        color: rgb(38, 31, 31);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration:dotted;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }

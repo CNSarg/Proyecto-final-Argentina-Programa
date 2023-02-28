@@ -1,15 +1,6 @@
-//BOTÓN HACIA ARRIBA (https://www.youtube.com/watch?v=SJVCvnKM_lI)
 
-const toTop = document.querySelector(".to-top");
 
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 100) {
-    toTop.classList.add("active");
-  } else {
-    toTop.classList.remove("active");
-  }
-})
-
+//API RANDOM USER // fue de lo primero que hice al iniciar el proyecto y no copié los links de donde obtuve info para hacerlo :(
 
 fetch('https://randomuser.me/api/?results=1')
     .then(res => res.json())
@@ -67,16 +58,74 @@ fetch('https://randomuser.me/api/?results=1')
         document.getElementById('email').innerHTML += email
         document.getElementById('domicilio').innerHTML += domicilio
         document.getElementById('edad').innerHTML += edadCalculada + ' años'
-        
-        
+               
     })
 
+// BOTÓN TEMA OSCURO - TEMA CLARO
+
+function cambiarTema() {
+    body.classList.toggle('oscuro')
+    botonTema.classList.toggle ('boton-oscuro')
+}
+document.getElementById("botonTema").addEventListener('click', cambiarTema);
+
+//BOTÓN HACIA ARRIBA (https://www.youtube.com/watch?v=SJVCvnKM_lI)
+
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset > 100) {
+    toTop.classList.add("active");
+  } else {
+    toTop.classList.remove("active");
+  }
+})
 
 
 
+// COLAPSAR NAVBAR LUEGO DEL CLIK (https://stackoverflow.com/questions/69881583/bootstrap-5-1-3-navbar-not-collapse-after-click)
+
+/*
+  jQuery(document).ready(function($) {
+      $('.navbar-nav li a').on("click", function() {
+          console.log("menu clicked");
+          $('button.navbar-toggler').click();
+      })
+  })
+*/
+
+// CALCULAR ALTO DEL HEADER PARA APLICAR SCROLL PADDING (https://www.youtube.com/watch?v=iGUSTyG-CYw)
+//(le agregué el retardo porque si no me lo calculaba antes de cargar los datos, probé con EventListener DOMContentLoaded
+//pero no me funcionó. Seguro hay una forma más adecuada de resolverlo pero se me acerca el tiempo de entrega del proyecto
+//y si bien no es lo óptimo así al menos funciona)
+
+
+function calcularScrollPadding () {
+    let altoHeader = document.getElementById("header")
+    .offsetHeight;
+    console.log(altoHeader);
+
+    document.documentElement.style.setProperty(
+        "--scroll-padding",
+        altoHeader + 10 + "px");
+    }
+
+setTimeout(calcularScrollPadding, 1500);
+
+/*document.getElementById("header").addEventListener("resize", (event) => {
+    calcularScrollPadding ()
+    });
+*/ 
+// Esto lo descarto por el momento porque sería ideal si el menú se cerrará al hacer click. Intenté solucionarlo mediante
+// Boostrap agregando class="collapse navbar-collapse" id="my-navbar-collapse" toggle="collapse" data-target=".navbar-collapse"
+// pero así se cerraba el menú pero dejaban de funcionar los links. No me dio el tiempo para seguir indagando.    
 
 
 
+/*document.documentElement.style.setProperty(
+  "--scroll-padding",
+  altoHeader + 10 + "px");
+});
 /* function obtenerDatos() {
     fetch('https://randomuser.me/api/?results=1')
     .then(res => res.json())
