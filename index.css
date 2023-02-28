@@ -3,7 +3,7 @@ body {
     --color-fondo-A: #f1f7ed;
     --color-fondo-B: #6d9d98;
     --color-fondo-C: #02c39a;
-    --color-texto-A: #13211d;
+    --color-texto-A: #0a110f;
     --color-texto-B: #F0F3BD;
     --color-texto-C: #05668d;
     --color-acento: black;
@@ -17,7 +17,7 @@ body.oscuro {
     --color-texto-A: #f1f7ed;
     --color-texto-B: #e0eec6;
     --color-texto-C: #F0F3BD;
-    --color-acento: white;
+    --color-acento: #243E36;
     
 }
 
@@ -28,7 +28,7 @@ body.oscuro {
 html {
     scroll-behavior: smooth;
     scroll-padding-top: var(--scroll-padding, 250px);
-    margin-bottom: 5.5vh ;
+    margin-bottom: 40px;
     margin-left: 0px;
     margin-right: 0px;   
 }
@@ -62,6 +62,7 @@ nav a {
 
 nav a:hover{
     font-weight: bold;
+    text-shadow: 1px 1px 2px var(--color-acento);
 }
 
 nav i {
